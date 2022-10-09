@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button_icon {
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 2rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+
+        .button_icon.new {
+            color: #517ED9;
+            background-color: #E0E5F0;
+        }
+
+        .button_icon.new:active {
+            box-shadow: 0 0 0 0.09em #E0E5F0;
+        }
+
+        .button_icon.modify {
+            color: #ffee00;
+            background-color: #ffee003f;
+        }
+
+        .button_icon.modify:active {
+            box-shadow: 0 0 0 0.09em #ffee004f;
+        }
+
+        .button_icon.delete {
+            color: #f93154;
+            background-color: #f9315228;
+        }
+
+        .button_icon.delete:active {
+            box-shadow: 0 0 0 0.09em #f9315256;
+        }
+
+        .switch {
+            appearance: none;
+            width: 40px;
+            height: 20px;
+            background-color: #eee;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .switch::after {
+            content: "";
+            position: absolute;
+            top: -0.1rem;
+            bottom: 0;
+            right: -30%;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background-color: white;
+            box-shadow: 1px 1px 5px rgb(204, 199, 199);
+            transition: all 0.3s;
+        }
+
+
+
+        .switch:checked::after {
+            background-color: #517ED9;
+            right: 60%;
+        }
+
+        /*rtl*/
+        .switch::after {
+             right: -30%;
+        }
+
+
+
+        .switch:checked::after {
+            background-color: #517ED9;
+            right: 60%;
+        } 
+    </style>
+</head>
+
+<body dir="ltr">
+
+    <button class="button_icon new">
+        <span class="iconify" data-icon="carbon:add"></span>
+    </button>
+    <br>
+    <button class="button_icon modify">
+        <span class="iconify" data-icon="bi:pen"></span>
+    </button>
+    <br>
+    <button class="button_icon delete">
+        <span class="iconify" data-icon="ic:outline-delete"></span>
+    </button>
+    <br>
+
+    <input type="checkbox" class="switch">
+    <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+</body>
+
+</html>
